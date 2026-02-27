@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: var(--body-bachground);
+}
+/**/
+:root{
+    --primary-color: rgb(230, 118, 20);
+    --body-bachground: bisque;
+    --head-foot-background:rgb(239, 190, 100);
+    --background-color:rgb(209, 177, 119) ;
+    --white:white;
+    --black:black;
+    --grey:rgb(126, 121, 121);
+    --heading-font1:clamp(28px ,3vw ,45px);
+    --heading-font2:clamp(14px ,2vw,45px);
+    --heading-font3:clamp(12px ,3vw,45px);
+    --text-font:clamp(10px ,1.5vw,35px);
+    --height:clamp(30px ,9.6vw,130px);
+    --margin-bottom:clamp(30px ,9.6vw,130px);
+
+}
+
+
+
+/* Start */
+
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    
+}
+.nav-container{
+    padding-block: 10px;
+    padding-inline: 20px;
+    background-color: var(--head-foot-background);
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+span{
+    color: var(--primary-color);
+}
+p{
+    font-size: var(--text-font);
+}
+.nav-container h1{
+    font-size: var(--heading-font1);
+
+}
+.nav-links{
+    font-size: var(--heading-font2);
+    
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.nav-item a{
+text-decoration: none;
+color:black;
+}
+.btn button{
+    padding: 4px;
+    background-color: rgb(222, 138, 29);
+    border-radius: 8px;
+    border: none;
+    font-size:var(--heading-font2) ;
+}
+
+/*Hero*/
+
+.hero{
+    padding-top: 25px;
+    display: flex;
+    border-bottom:1px solid rgb(204 204 204);
+    min-height: 70%;
+
+}
+.hero-box{
+    padding-top: var(--height);;
+    padding-inline: 20px;
+    flex: 1 1 50%;   
+    line-height: 1.4;
+    
+}
+.hero-box h2{
+    font-size: var(--heading-font3);
+        animation-name: upToBottom;
+    animation-duration: 2s;
+}
+.hero-box p{
+    color: var(--grey);
+    animation-name: slideIn;
+    animation-duration: 2s;
+     animation-fill-mode: forwards;
+}
+
+.A-btn{
+    margin-top: 20px;
+    margin-bottom: var(--margin-bottom);
+    border: none;
+    background-color: var(--primary-color);
+    font-size: var(--text-font);
+    border-radius: 8px;
+    padding: 7px;
+    color: var(--white);
+    animation-name: fadeIn;
+    animation-duration: 6s;
+}
+.hero-img{
+    max-width: 125%;
+    height: auto;
+    margin-top: -30px;
+    overflow: hidden;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    animation-name: rightToLeft;
+    animation-duration: 2s;
+}
+.right-hero-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/*Features*/
+.feature-container
+{
+    padding-top: 65px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+   
+   
+}
+.feature-container h3{
+    font-size: var(--heading-font3);
+    
+}
+.grid{
+    
+     display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+    font-size: var(--heading-font2);
+     margin-top: 20px;
+     margin-bottom: 20px;
+     gap: 20px;
+     width: 75vw;
+
+}
+.grid-divs{
+    margin-top: 20px;
+    border: 1px solid rgb(204 204 204);
+    box-shadow: 0 0 10px black ;
+    border-radius: 20px;
+    line-height: 1.4;
+    padding: 5px;
+}
+.grid img{
+    width: 70px;
+}
+.grid-btn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: var(--primary-color);
+    font-size: var(--text-font);
+    border-radius: 8px;
+    padding: 7px;
+    color: var(--white);
+    animation-name: fadeIn;
+    animation-duration: 4s;
+}
+
+
+/*Review*/
+.review-container {
+    padding: 10px 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.reviews h2 {
+    font-size: var(--heading-font3);
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-align: center;
+}
+.review {
+    max-width: 900px;
+    min-width: 60vw;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: var(--text-font);
+    background-color: var(--white);
+}
+.review p {
+    color: var(--grey);
+}
+.review span {
+    display: block;
+    margin-top: 5px;
+    font-size: var(--heading-font2);
+    color: var(--grey);
+}
+
+footer{
+    border-top:2px solid rgb(204, 204, 204);
+    text-align: center;
+    padding: 15px;
+    background-color: var(--head-foot-background);
+}
+.footer-container p{
+    font-size: var(--heading-font2);
+}
+
+
+/*media Queries*/
+
+
+
+@media (max-width: 450px) {
+     nav{
+        display: none;
+    }
+    .nav-container {
+        align-items: center;
+        height: var(--height);
+    }
+    .nav-container h1{
+        font-size: 16px;
+    }
+    .hero{
+        flex-direction: column;
+    }
+    .hero-box {
+        flex: 1 1 100%;
+    }
+    .hero-img{
+        max-width: 70%;
+        height: auto;
+    }
+}
+
+/*features grid */
+@media   (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media   (max-width: 400px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+
+
+/*Hovers Effects*/
+
+.nav-links a:hover {
+    color: rgb(97, 97, 78);
+    border-bottom:1px solid rgb(24, 18, 18);
+}
+
+.A-btn:hover{
+    background-color: rgb(215, 159, 39);
+    color: white;
+    cursor: pointer;
+}
+.grid-btn:hover{
+    background-color: rgb(215, 159, 39);
+    color: white;
+    cursor: pointer;
+}
+.grid-divs:hover{
+    border: 2px solid rgb(215, 159, 39);
+    background-color: rgb(252, 234, 213);
+}
+.btn:hover{
+    background-color: rgb(215, 159, 39);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* toogle */
+#toggle{
+    display: none;
+}
+
+#toggle:checked ~ .btn{
+  color: white;
+}
+
+body:has(#toggle:checked) {
+  background: #111;
+  color: white;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translatex(-100%);
+    }
+    to {
+        transform: translatex(0);
+    }
+}
+@keyframes upToBottom {
+    from {
+        transform: translatey(-100%);
+    }
+    to {
+        transform: translatey(0);
+    }
+}
+@keyframes rightToLeft {
+    from {
+        transform: translatex(30%);
+    }
+    to {
+        transform: translatex(0);
+    }
+}
