@@ -1,0 +1,1 @@
+it is a project that includes navbar , Hero sections, features , Review section and footer . It has a beautiful view that includes animations ,hover effects and other best properties of css. it is a responsive project that is suitable for mobile ,desktop and i pads.
