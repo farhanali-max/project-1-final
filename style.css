@@ -18,11 +18,26 @@ body{
     --grey:rgb(126, 121, 121);
     --heading-font1:clamp(28px ,3vw ,45px);
     --heading-font2:clamp(14px ,2vw,45px);
-    --heading-font3:clamp(12px ,3vw,45px);
-    --text-font:clamp(10px ,1.5vw,35px);
+    --heading-font3:clamp(16px ,3vw,45px);
+    --heading-font4:clamp(16px ,2.5vw,45px);
+    --text-font:clamp(14px ,1.5vw,35px);
     --height:clamp(30px ,9.6vw,130px);
     --margin-bottom:clamp(30px ,9.6vw,130px);
 
+}
+
+/* toogle */
+#toggle{
+    display: none;
+}
+
+#toggle:checked ~ .btn{
+  color: white;
+}
+
+body:has(#toggle:checked) {
+  background: #111;
+  color: white;
 }
 
 
@@ -80,7 +95,6 @@ color:black;
 .hero{
     padding-top: 25px;
     display: flex;
-    border-bottom:1px solid rgb(204 204 204);
     min-height: 70%;
 
 }
@@ -100,7 +114,7 @@ color:black;
     color: var(--grey);
     animation-name: slideIn;
     animation-duration: 2s;
-     animation-fill-mode: forwards;
+     
 }
 
 .A-btn{
@@ -124,6 +138,9 @@ color:black;
     animation-name: rightToLeft;
     animation-duration: 2s;
 }
+.left-hero-content {
+        font-size: 22px;
+    }
 .right-hero-content{
     display: flex;
     justify-content: center;
@@ -144,7 +161,17 @@ color:black;
 }
 .feature-container h3{
     font-size: var(--heading-font3);
+    line-height: 1;
     
+}
+.features-container-p{
+    padding-block: 10px;
+}
+.grid-divs h3{
+    font-size: var(--heading-font4);
+    line-height: 1;
+    margin-top: 10px;
+    padding-block: 10px;
 }
 .grid{
     
@@ -167,7 +194,7 @@ color:black;
     padding: 5px;
 }
 .grid img{
-    width: 70px;
+    width: 90px;
 }
 .grid-btn{
     margin-top: 20px;
@@ -234,7 +261,7 @@ footer{
 
 
 @media (max-width: 450px) {
-     nav{
+     .nav-links-container {
         display: none;
     }
     .nav-container {
@@ -254,6 +281,20 @@ footer{
         max-width: 70%;
         height: auto;
     }
+    .left-hero-content h2 {
+        font-size: 22px;
+    }
+    
+    .left-hero-content p {
+        margin-block: 21px;
+        font-size: 14px;
+    }
+    .A-btn{
+        margin-block: 8px;
+        font-size: 15px;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 /*features grid */
@@ -261,7 +302,9 @@ footer{
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+    .grid-img{
+        width: 70px;
+    }
 }
 
 @media   (max-width: 400px) {
@@ -291,8 +334,10 @@ footer{
     cursor: pointer;
 }
 .grid-divs:hover{
-    border: 2px solid rgb(215, 159, 39);
+    outline: 2px solid;
+    /*border: 2px solid rgb(215, 159, 39); */
     background-color: rgb(252, 234, 213);
+    color: black;
 }
 .btn:hover{
     background-color: rgb(215, 159, 39);
@@ -300,21 +345,6 @@ footer{
     cursor: pointer;
 }
 
-
-
-/* toogle */
-#toggle{
-    display: none;
-}
-
-#toggle:checked ~ .btn{
-  color: white;
-}
-
-body:has(#toggle:checked) {
-  background: #111;
-  color: white;
-}
 
 
 /* Animations */
@@ -350,4 +380,4 @@ body:has(#toggle:checked) {
     to {
         transform: translatex(0);
     }
-}
+} 
